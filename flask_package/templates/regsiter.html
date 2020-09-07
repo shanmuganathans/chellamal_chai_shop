@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Register
+{% endblock%}
+
+ {% block sidebar %}
+ {% endblock%}
+
+{% block content %}
+
+<div class= "main wrapper  clearfix">
+  <form method="POST", action="">
+    {{ form.hidden_tag() }}
+    <table>
+      <tr>
+        <td>Username:  </td>
+        <td>{{ form.username }}</td>
+      </tr>
+      <tr>
+        <td>Email:  </td>
+        <td>{{ form.email }}</td>
+      </tr>
+      <tr>
+        <td>Password:  </td>
+        <td>{{ form.password }}</td>
+      </tr>
+      <tr>
+        <td>Confirm Password:  </td>
+        <td>{{ form.confirm_password }}</td>
+      </tr>
+      <br>
+      <tr>
+        <td> </td>
+        <td><button type="submit>"> Sign Up </button></td>
+      </tr>
+    </table>
+
+  </form>
+
+</div>
+<div class= "main wrapper  clearfix">
+  <a href="{{url_for('login_page')}}">Already have an account for Login ?</a>
+</div>
+<!-- <div class="container">
+    <div class="row" style="margin-top: 40px">
+        <div class="col-sm-6">
+            <form method="POST">
+                <div class="form-group">
+                  <label for="email">Username : </label>
+                  <input type="text" name="username" class="form-control" id="username">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email : </label>
+                  <input type="email" name="mail" class="form-control" id="mail">
+                </div>
+                <div class="form-group">
+                  <label for="email">Password : </label>
+                  <input type="password" name="password" class="form-control" id="password">
+                </div>
+                <button type="submit" class="btn form-control btn-default">Register</button>
+            </form>
+        </div>
+    </div> -->
+{% endblock %}

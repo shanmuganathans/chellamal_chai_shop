@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}
+   {{ title }}
+{% endblock%}
+
+ {% block sidebar %}
+ {% endblock%}
+
+
+{% block content %}
+
+<div class= "main wrapper  clearfix">
+	<form method="POST", action="">
+	  {{ form.hidden_tag() }}
+	  <table>
+		<tr>
+		  <td>Email:  </td>
+		  <td>{{ form.email }}</td>
+		</tr>
+		<tr>
+		  <td>Password:  </td>
+		  <td>{{ form.password }}</td>
+		</tr>
+		<tr>
+		  <td>Rember me:  </td>
+		  <td>{{ form.rember }}</td>
+		</tr>
+		<br>
+		<tr>
+		  <td> </td>
+		  <td><button type="submit>"> Sign In </button></td>
+		</tr>
+	  </table>
+  
+	</form>
+  
+  </div>
+  <div class= "main wrapper  clearfix">
+	<a href="{{url_for('register_page')}}">Do not have an account for Login ?</a>
+  </div>
+<!-- <section>
+    <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-85 p-b-20">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-70">
+						Welcome
+					</span>
+
+					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+						<input class="input100" type="text" name="username">
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+					<ul class="login-more p-t-190">
+						<li class="m-b-8">
+							<span class="txt1">
+								Forgot
+							</span>
+
+							<a href="#" class="txt2">
+								Username / Password?
+							</a>
+						</li>
+
+						<li>
+							<span class="txt1">
+								Don’t have an account?
+							</span>
+
+							<a href="#" class="txt2">
+								Sign up
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+</section> -->
+{% endblock %}

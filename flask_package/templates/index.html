@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+    Home Page
+{% endblock%}
+{% block content %}
+<article>
+    <header>
+        <h1>Welcome..!</h1>
+        <body>
+        	<img src="../static/img/logo.ico" alt = "Chai">
+        </body>
+        <p>Welcome to our Chai shop.!</p>
+        <p> Chai for chai Lovers</p>
+        <p>We made chai for you by our traditional way..!</p>
+
+    </header>
+    <section>
+    	<h3>Available products..!</h3>
+    	<li><a href="{{url_for('sale')}}">Click Here..!</a></li>
+    </section>
+</article>
+{% endblock %}
